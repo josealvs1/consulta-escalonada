@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1f3a">
+  <title>Consulta de Preços</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="topo-conteudo">
+      <div class="logo-box">R$</div>
+      <div>
+        <h1>Consulta de Preços</h1>
+        <p>TTC e TTV por segmento</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="pesquisa-card">
+      <div class="pesquisa-linha">
+        <div class="pesquisa-input-wrap">
+          <span class="icone-pesquisa">⌕</span>
+          <input
+            type="search"
+            id="pesquisa"
+            placeholder="Pesquise pelo código ou nome do produto..."
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <button
+            type="button"
+            id="btnLimpar"
+            class="btn-limpar oculto"
+            aria-label="Limpar pesquisa"
+            title="Limpar pesquisa"
+          >×</button>
+        </div>
+
+        <button
+          type="button"
+          id="btnAtualizar"
+          class="btn-atualizar"
+          title="Atualizar preços"
+        >↻</button>
+      </div>
+
+      <div class="info-pesquisa">
+        <span id="statusProdutos">Carregando produtos...</span>
+        <span id="ultimaAtualizacao"></span>
+      </div>
+    </section>
+
+    <section id="estadoCarregando" class="estado">
+      <div class="loader"></div>
+      <strong>Carregando tabela de preços...</strong>
+    </section>
+
+    <section id="estadoErro" class="estado erro-box oculto">
+      <strong>Não foi possível carregar os preços.</strong>
+      <span id="textoErro"></span>
+      <button type="button" id="btnTentarNovamente">Tentar novamente</button>
+    </section>
+
+    <section id="estadoVazio" class="estado oculto">
+      <div class="estado-icone">🔎</div>
+      <strong>Nenhum produto encontrado</strong>
+      <span>Tente pesquisar por outro código ou nome.</span>
+    </section>
+
+    <section id="listaProdutos" class="lista-produtos"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
