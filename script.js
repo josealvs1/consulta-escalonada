@@ -1,4 +1,4 @@
-const WEB_APP_URL = "COLE_AQUI_A_URL_DO_SEU_APPS_SCRIPT";
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbw6ncAKWC50QgTyujHKh9UkZMSdkK69_Zb7NbXK2eoZpH0-rxwBlBqd57AohA21kBrhwQ/exec";
 
 // Pasta do próprio repositório GitHub Pages.
 const PASTA_IMAGENS = "imagens_produtos";
